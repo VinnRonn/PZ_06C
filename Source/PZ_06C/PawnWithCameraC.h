@@ -29,10 +29,10 @@ protected:
 	FVector2D MovementInput;
 	FVector2D CameraInput;
 	float ZoomFactor;
-	float JumpLength;
-	float HightJump;
 	bool bZoomingIn;
 	bool bJumping;
+	float JumpLength;
+	float HightJump;
 
 
 	void MoveForward(float AxisValue);

@@ -153,13 +153,12 @@ void APawnWithCameraC::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	InputComponent->BindAction("ZoomIn", IE_Pressed, this, &APawnWithCameraC::ZoomIn);
 	InputComponent->BindAction("ZoomIn", IE_Released, this, &APawnWithCameraC::ZoomOut);
 	
-	InputComponent->BindAction("Jump", IE_Pressed, this, &APawnWithCameraC::JumpIn);
-	//InputComponent->BindAction("Jump", IE_Released, this, &APawnWithCameraC::JumpOut);
-	
 	InputComponent->BindAxis("MoveForward", this, &APawnWithCameraC::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &APawnWithCameraC::MoveRight);
 	InputComponent->BindAxis("CameraPitch", this, &APawnWithCameraC::CameraPitch);
 	InputComponent->BindAxis("CameraYaw", this, &APawnWithCameraC::CameraYaw);
+
+	InputComponent->BindAction("Jump", IE_Pressed, this, &APawnWithCameraC::JumpIn);
 	
 }
 
